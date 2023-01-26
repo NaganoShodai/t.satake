@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/*ヘッダー*/
+.top{
+    font-size: 16px;
+    background-color: #ef8d4b;
+    color: white;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing:1.5px;
+    font-family:monospace;  
+} 
+
+/*入力フォーム全体*/
+#formArea{
+    width:380px;
+    margin:40px auto 10px auto;   
+}
+
+	/*アドレスPW入力欄*/
+	.inputArea{
+	    width:calc(100% - 45px);
+	    height:30px;
+	    margin:15px;
+	    border:2px solid #ee853e;
+	    border-radius:5px;
+	    padding-left: 8px;
+	    padding-top:3px;
+	}
+	
+	/*入力時設定*/
+	input[type="text"]:focus {
+	  border: 1.5px solid #ee853e;
+	  outline: 0;
+	  font-size:19px;
+	  font-family:Yu Gothic;
+	}
+	input[type="password"]:focus {
+	  border: 1.5px solid #ee853e;
+	  outline: 0;
+	  font-size:19px;
+	  font-family:Yu Gothic;
+	}
+	
+	/*入力例の文言*/
+	::placeholder {
+	  color: #cdcdcd;
+	  font-size:19px;
+	  font-family:Yu Gothic;
+	}
+	.error{
+	  color:red;
+	}
+
+/*ボタンエリア*/
+.buttonArea{
+    width:240px;
+    margin:40px auto 35px auto;
+}
+
+	/*ボタン本体*/
+	.buttonBody{
+	    width:100%;
+	    background-color:#ed7d31;
+	    border-radius:8px;
+	    border: none;
+	    color: white;
+	    height:40px;
+	    font-size:18px;
+	    letter-spacing:2px;
+	    font-family:monospace;
+		font-weight:bold;
+		cursor: pointer;
+	    
+	}
+
+/*URLフォーム*/
+#urlForm{
+    width:300px;
+    margin:auto;
+    text-align: center;
+    font-family:Yu Gothic;
+    font-size:18px;
+    font-weight:500;
+}
+
+	/*リンク設定*/
+	.linkName {
+	color:#ed7d31;
+	}
+	
+	/*URLリンク*/
+	.urlLink{
+	margin:15px;
+	}

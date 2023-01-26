@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<!-- タイトル -->
+	    <title>Test4画面</title>
+	    <!-- エンコード -->
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <!-- CSS -->
+	    <link rel="stylesheet" type="text/css" media="all" th:href="'..' + @{/css/login.css}" />
+	</head>
+	
+	<body>
+			
+		<!-- 見出し -->
+		<div class ="top">
+			メールアドレスとパスワードでログイン
+		</div>
+		
+			
+		<!-- エラーメッセージ -->
+		<p class="error" th:each="errMsg : ${error_massage}" th:text="${errMsg}"></p>
+	
+		<!-- アドレスPW入力エリア -->
+		<form id="formArea" th:action="@{/loginsubmit}" method="post" >
+			
+				
+			<!-- メールアドレス入力  後でrequired="required"を入れる -->
+			<input type ="text" th:value="${mdreturn}" placeholder="メールアドレス" class="inputArea" id="mailInput" name="md"/>
+			
+			<!--パスワード入力  後でrequired="required"を入れる-->
+			<input type ="password" th:value="${pwreturn}" placeholder="パスワード" class="inputArea" id="passwordInput" name="pw"/>
+			
+			<!--テーブルの値を出力させる 
+			<table>
+			<tr th:each="users : ${userlist}">
+			      <td th:text="${users.id}"></td>
+			      <td th:text="${users.email}"></td>
+			      <td th:text="${users.password}"></td>
+			</tr>
+			</table>
+			 -->
+						
+			<!-- ログインボタン -->
+			<div class="buttonArea">
+				<button class="buttonBody" type="submit" >ログイン</button>
+		    </div>
+		    
+	    </form>
+	    <!-- ログイン画面とURLフォームで分ける -->
+	    <hr color="#f0a26e">
+	    
+	    <!-- URLフォーム -->
+	    <div id="urlForm">
+	    
+		    <!-- 新規登録 -->
+		    <div id="newRegister" class="urlLink" >
+		    	<a class="linkName" href="#">新規登録</a>
+		    </div>
+		    <!-- パスワードを忘れた人向け -->
+		    <div id="reissue" class="urlLink">
+		    	<a class="linkName" href="#">パスワードを忘れた方はこちら</a>
+			</div>
+			
+		</div>
+	</body>
+</html>

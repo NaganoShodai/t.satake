@@ -15,21 +15,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 import com.entity.City;
-import com.form.Test2Class;
+import com.form.Test4Class;
 import com.repository.CityRepository;
 /**
- *　test2.html用のコントローラー
+ *　test4.html用のコントローラー
  */
 @Controller
-public class Test2Controller {
+public class Test4Controller {
 	
 	// Cityテーブル用リポジトリ
 	@Autowired private CityRepository cityRep;
 	// 画面名
-	private static final String PAGE_NAME = "test2";
+	private static final String PAGE_NAME = "test4";
 
-	// アクセスURL定義(アクセスURL:http://localhost:8080/test2)
-	@RequestMapping("/test2")
+	// アクセスURL定義(アクセスURL:http://localhost:8080/test4)
+	@RequestMapping("/test4")
 	// トランザクション
 	@Transactional
 	public String disp(Model model) {
@@ -75,27 +75,26 @@ public class Test2Controller {
 	/* データベースアクセス処理 end */
 		
 		// インスタンス生成
-		Test2Class test2Class = new Test2Class();
+		Test4Class test4Class = new Test4Class();
 		// モデル設定
-		model.addAttribute("Test2Class", test2Class);
+		model.addAttribute("Test4Class", test4Class);
 		// 画面遷移
 		return PAGE_NAME;
 	}
 	
-	
 	// POST・GETリクエストの両方を許容
-	@RequestMapping("/input_3")
+	@RequestMapping("/input_6")
 	public String input3(HttpServletRequest req, Model model,
 						// クラスとして受け取る
-						Test2Class test2Class) {
+						Test4Class test4Class) {
 		
 		// 入力値
-		String input3 = test2Class.getInput_3();
+		String input6 = test4Class.getInput_6();
 		// クラスの表示値に設定
-		test2Class.setDisp_3("出力:" + input3);
+		test4Class.setDisp_6("出力:" + input6);
 		
 		// モデル設定
-		model.addAttribute("Test2Class", test2Class);
+		model.addAttribute("Test4Class", test4Class);
 		// 画面遷移
 		return PAGE_NAME;
 	}

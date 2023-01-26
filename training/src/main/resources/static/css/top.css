@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/*ログイントップ*/
+#logintop{
+    background-color: #fbe5d6;
+    height: 70px;
+}
+
+	/*トップ書式*/
+	.top{
+	    font-size: 25px;
+	    color: #eb701c;
+	    display: block;
+	    text-align:center;
+	    padding:20px;
+	    font-family:Yu Gothic;
+	} 

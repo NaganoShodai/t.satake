@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="jp" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+  <p th:text="${name+text}"></p>
+  <p th:text="${num1*num2}"></p>
+  <p th:text="${test < 10 ?'小さい':'おおきに'}"></p>
+  <p th:text="${name == '佐藤' ?'正常なユーザーです':'不正アクセスしたユーザーです'}"></p>
+  
+  <p th:if="${result}">正しい</p>
+  <p th:if="${result2}">th:ifを理解できている</p>
+  
+  <ul th:each="city:${city_list}"></ul>
+  		<li th:text="${city_name}"></li>
+  			
+</body>
+</html>
